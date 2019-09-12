@@ -1,0 +1,1 @@
+sudo docker run -d -p 9000:8500 -v $(pwd)/pdd_model:/models/pdd_model -e MODEL_NAME=pdd_model -t tensorflow/serving:latest --tensorflow_intra_op_parallelism=4 --tensorflow_inter_op_parallelism=4
